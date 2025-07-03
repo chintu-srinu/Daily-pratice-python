@@ -34,4 +34,25 @@ if num=="yes" and button:
         print("remaing balance in your account is",balance)
 else:
     print("cancelled withdrwal")
+
+num=(input("please enter atm card (yes/no):"))
+button=True
+balance=5000
+available_cash=[500,1000,2000]
+if num=="yes" and button:
+    print("available notes",available_cash)
+    amount=int(input("enter amout"))
+    if amount in available_cash:
+        if amount <= balance:
+            # amount=int(input("enter amout"))
+            print("seccesfully withdrawn ",amount)
+            balance-=amount
+            print("take your recicept",)
+            print("remaing balance in your account is",balance)
+        elif amount >balance:
+            print("insufficient")
+    else:
+        print("no available cash only this  cash is available" ,available_cash)
+else:
+    print("cancelled withdrwal")
     
